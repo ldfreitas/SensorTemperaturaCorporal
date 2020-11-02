@@ -57,7 +57,7 @@ float filtro(void){
   long int cont= 0;
   double valorSensor= 0;
   
-  while(tempoInicial - millis() <= TempoParada){
+  while(millis() - tempoInicial <= TempoParada){
     valorSensor= hdc1080.readTemperature();
     cont++;
     delay(passo);
